@@ -1,0 +1,6 @@
+<% if current_user%>
+
+    <%= current_user.name %>
+    <%= link_to 'User Show Page', users_show_path(current_user)%>
+    
+<%end%>
