@@ -13,12 +13,15 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <% if current_user %>
-    <%current_user%>  
+    <%= current_user.name %>
     <button class='front-log'><%= link_to " Logout", destroy_user_session_path, :method => :delete, class: "destroy_user_session" %></button>
   <%else%>
     <button class='front-log' ><%= link_to "Sign up", new_user_registration_path,  class: "new__user_registration" %></button>
     <button class='front-log'><%= link_to "Login", new_user_session_path,  class: "new_user_session" %></button>
-  <% end %> 
+  <% end %>
+  <%= link_to "Events Index", events_path%>
+    <%= link_to "Users Index", root_path%>
+
 
     <%= yield %>
   </body>

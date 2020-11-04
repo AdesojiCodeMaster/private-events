@@ -24,6 +24,28 @@
   <strong>Creator:</strong>
   <%= @event.creator.name %>
 </p>
+<table>
+    <p>ATTENDEES INFO</p>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% EventAttendance.all.each do |eventattendance| %>
+        <%if @event.id == eventattendance.attended_event_id%>
+            <% User.all.each do |user| %>
+                <% if user.id == eventattendance.attendee_id%>
+                    <tr>
+                        <td><%= user.name %></td>
+                    </tr>
+                <%end%>
+            <%end%>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

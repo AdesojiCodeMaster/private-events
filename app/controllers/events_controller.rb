@@ -36,6 +36,19 @@ class EventsController < ApplicationController
     end
   end
 
+  def attending
+    @event = Event.find(params[:event_id])
+    if @event.event_attendances.exists?(attendee_id: current_user.id, attended_event_id: params[:event_id])
+      flash[:alert] = ' !!! You already signed up for this event !!!'
+    else
+      @event.event_attendances.new(attendee_id: current_user.id, attended_event_id: params[:event_id])
+
+      @event.save
+    end
+
+    redirect_to  users_show_path(current_user)
+  end
+
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
