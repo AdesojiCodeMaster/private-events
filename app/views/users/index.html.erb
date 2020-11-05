@@ -1,6 +1,31 @@
 <% if current_user%>
+<table>
+<h3>All Available Events</3>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+  <th>Location</th>
+  <th>Date</th>
+  <th>Creator</th>
+  <th colspan="4"></th>
+</tr>
+</thead>
 
-    <%= current_user.name %>
-    <%= link_to 'User Show Page', users_show_path(current_user)%>
-    
+<tbody>
+<% Event.all.each do |event| %>
+    <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= event.location %></td>
+        <td><%= event.date %></td>
+        <td><%= event.creator.name %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Attend', event_attending_path(event), method: :post %></td>
+      </tr>
+   <% end %>
+</tbody>
+</table>
 <%end%>
