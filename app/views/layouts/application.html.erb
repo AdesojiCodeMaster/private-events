@@ -12,17 +12,25 @@
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <div class='arr-links'>
+  <div class='col-arr'>
   <% if current_user %>
-    <%= current_user.name %>
+
+    <label for='name'> Current User Name: <%= current_user.name %> </label>
     <button class='front-log'><%= link_to " Logout", destroy_user_session_path, :method => :delete, class: "destroy_user_session" %></button>
-  <%else%>
+    </div>
+    <div class='arr-link'>
+    <div class='t-link'><%= link_to "Event Types", events_path%> </div>
+    <div class='t-link'> <%= link_to "All Events", root_path%> </div>
+    <div class='t-link'><%= link_to 'Event DashBoard', users_show_path(current_user)%></div>
+    <div class='t-link'> <%= link_to 'Create New Event', new_event_path %></div>
+    </div>
+  </div>
+    <%else%>
     <button class='front-log' ><%= link_to "Sign up", new_user_registration_path,  class: "new__user_registration" %></button>
     <button class='front-log'><%= link_to "Login", new_user_session_path,  class: "new_user_session" %></button>
   <% end %>
-  <%= link_to "Events Index", events_path%>
-  <%= link_to "Users Index", root_path%>
-  <%= link_to 'User Show Page', users_show_path(current_user)%>
-  <%= link_to 'New Event', new_event_path %>
+  
   <%= yield %>
   </body>
 </html>

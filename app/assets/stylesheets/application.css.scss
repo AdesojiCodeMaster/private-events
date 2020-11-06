@@ -41,8 +41,42 @@
   }
   
   .lay_out {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arr-links {
+    display: flex;
+    flex-direction: row;
+}
   
+.col-arr {
+    display: flex;
+    flex-direction: column;
+}
+
+.arr-link {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+}
+
+.t-link {
+    margin: 30px;
+    font-size: 1.0rem;
+}
+
+.t-link a {
+    background-color: #8ab5da;
+    border: 1px solid #ff0000;
+    color: #fff;
+    padding: 3px;
+}
+
+label {
+    color: #800080;
+    margin-bottom: 10px;
+    font-size: 15px;
+    
+}
