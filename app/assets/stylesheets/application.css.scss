@@ -13,72 +13,71 @@
  *= require_tree .
  *= require_self
  */
- .lay-lists {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-  }
-  
-  .top-list {
-    background-color: #00ffff; 
-    color: #5656d3;
-    margin: 10px;
-    padding: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .front-log {
-    height: 46px;
-    margin-right: 20px;
-  }
-  
-  span {
-    color: #b50fd6;
-    font-size: 18px;
-  }
-  
-  .lay_out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.lay-lists {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.top-list {
+  background-color: #0ff;
+  color: #5656d3;
+  margin: 10px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.front-log {
+  height: 46px;
+  margin-right: 20px;
+}
+
+span {
+  color: #b50fd6;
+  font-size: 18px;
+}
+
+.lay_out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .arr-links {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-  
+
 .col-arr {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .arr-link {
-    display: flex;
-    flex-direction: row;
-    margin-top: 13px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 13px;
 }
 
 .t-link {
-    margin: 30px;
-    font-size: 1.0rem;
+  margin: 30px;
+  font-size: 1rem;
 }
 
 .t-link a {
-    background-color: #8ab5da;
-    border: 1px solid #ff0000;
-    color: #fff;
-    padding: 3px;
+  background-color: #8ab5da;
+  border: 1px solid #f00;
+  color: #fff;
+  padding: 3px;
 }
 
 label {
-    color: #800080;
-    margin-bottom: 10px;
-    font-size: 15px;
-    
+  color: #800080;
+  margin-bottom: 10px;
+  font-size: 15px;
 }
 
 .front-btn {
