@@ -16,7 +16,7 @@
   <div class='col-arr'>
   <% if current_user %>
 
-    <label for='name'> Current User Name: <%= current_user.name %> </label>
+    <label for='name'>Event Planner: <%= current_user.name %></label>
     <button class='front-log'><%= link_to " Logout", destroy_user_session_path, :method => :delete, class: "destroy_user_session" %></button>
     </div>
     <div class='arr-link'>
