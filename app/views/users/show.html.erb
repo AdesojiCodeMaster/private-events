@@ -22,9 +22,9 @@
             <td><%= event.location %></td>
             <td><%= event.date %></td>
             <td><%= event.creator.name %></td>
-            <td><%= link_to 'Show', event %></td>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show Event', event %></td>
+            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
+            <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <%end%>
     <% end %>
@@ -54,7 +54,8 @@
                         <td><%= event.location %></td>
                         <td><%= event.date %></td>
                         <td><%= event.creator.name %></td>
-                        <td><%= link_to 'Show', event %></td>
+                        <td><%= link_to 'Show Event', event %></td>
+                        <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     </tr>
                 <%end%>
             <%end%>
@@ -84,9 +85,9 @@
             <td><%= event.location %></td>
             <td><%= event.date %></td>
             <td><%= event.creator.name %></td>
-            <td><%= link_to 'Show', event %></td>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show Event', event %></td>
+            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
+            <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <%end%>
     <% end %>
@@ -115,9 +116,9 @@
             <td><%= event.location %></td>
             <td><%= event.date %></td>
             <td><%= event.creator.name %></td>
-            <td><%= link_to 'Show', event %></td>
-            <td><%= link_to 'Edit', edit_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show Event', event %></td>
+            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
+            <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <%end%>
     <% end %>
