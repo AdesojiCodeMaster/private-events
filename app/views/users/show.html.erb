@@ -1,7 +1,75 @@
 <% require 'date'%>
 
 <table>
-    <h1> Current User Created Event(s)</h>
+    <h1>Attending Upcomming Event(s)</h1>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% EventAttendance.all.each do |eventattendance| %>
+        <% if current_user.id == eventattendance.attendee_id%>
+            <% Event.upcoming_events.each do |event| %>
+                <%if event.id == eventattendance.attended_event_id%>
+                    <tr>
+                        <td><%= event.name %></td>
+                        <td><%= event.description %></td>
+                        <td><%= event.location %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.creator.name %></td>
+                        <td><%= link_to 'Show Event', event %></td>
+                        <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    </tr>
+                <%end%>
+            <%end%>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+    <h1>Attending Past Event(s)</h1>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% EventAttendance.all.each do |eventattendance| %>
+        <% if current_user.id == eventattendance.attendee_id%>
+            <% Event.past_events.each do |event| %>
+                <%if event.id == eventattendance.attended_event_id%>
+                    <tr>
+                        <td><%= event.name %></td>
+                        <td><%= event.description %></td>
+                        <td><%= event.location %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.creator.name %></td>
+                        <td><%= link_to 'Show Event', event %></td>
+                        <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    </tr>
+                <%end%>
+            <%end%>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+    <h1> <%= current_user.name %>Created Event(s)</h>
   <thead>
     <tr>
       <th>Name</th>
@@ -29,99 +97,4 @@
         <%end%>
     <% end %>
   </tbody>
-</table>
-<table>
-    <h1>Attending Event(s)</h1>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Creator</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% EventAttendance.all.each do |eventattendance| %>
-        <% if current_user.id == eventattendance.attendee_id%>
-            <% Event.all.each do |event| %>
-                <%if event.id == eventattendance.attended_event_id%>
-                    <tr>
-                        <td><%= event.name %></td>
-                        <td><%= event.description %></td>
-                        <td><%= event.location %></td>
-                        <td><%= event.date %></td>
-                        <td><%= event.creator.name %></td>
-                        <td><%= link_to 'Show Event', event %></td>
-                        <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                    </tr>
-                <%end%>
-            <%end%>
-        <%end%>
-    <% end %>
-  </tbody>
-</table>
-
-<table>
-    <h1>Upcomming Event(s)</h1>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Creator</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-    <% Event.all.each do |event| %>
-        <% if event.date > DateTime.now%>
-          <tr>
-            <td><%= event.name %></td>
-            <td><%= event.description %></td>
-            <td><%= event.location %></td>
-            <td><%= event.date %></td>
-            <td><%= event.creator.name %></td>
-            <td><%= link_to 'Show Event', event %></td>
-            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
-            <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <%end%>
-    <% end %>
-  </tbody>
-
-</table>
-
-<table>
-    <h1>Past Event(s)</h1>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Creator</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-    <% Event.all.each do |event| %>
-        <% if event.date < DateTime.now%>
-          <tr>
-            <td><%= event.name %></td>
-            <td><%= event.description %></td>
-            <td><%= event.location %></td>
-            <td><%= event.date %></td>
-            <td><%= event.creator.name %></td>
-            <td><%= link_to 'Show Event', event %></td>
-            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
-            <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <%end%>
-    <% end %>
-  </tbody>
-
 </table>
