@@ -11,7 +11,7 @@
       <th>Location</th>
       <th>Date</th>
       <th>Creator</th>
-      <th colspan="4"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -23,8 +23,6 @@
             <td><%= event.date %></td>
             <td><%= event.creator.name %></td>
             <td><%= link_to 'Show Event', event %></td>
-            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
-            <td><%= link_to 'Cancel Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <td><%= link_to 'Attend Event', event_attending_path(event), method: :post %></td>
           </tr>
     <% end %>
@@ -41,7 +39,7 @@
       <th>Location</th>
       <th>Date</th>
       <th>Creator</th>
-      <th colspan="3"></th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -53,9 +51,7 @@
             <td><%= event.date %></td>
             <td><%= event.creator.name %></td>
             <td><%= link_to 'Show Event', event %></td>
-            <td><%= link_to 'Update Event', edit_event_path(event) %></td>
-            <td><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+            </tr>
     <% end %>
   </tbody>
 

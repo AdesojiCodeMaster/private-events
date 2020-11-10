@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :event_attendances
-  resources :events, only: %i[index create new show edit attending update destroy] do
+  resources :events, only: %i[index create new show attending ] do
     post 'attending', :users
   end
   get 'users/new'
