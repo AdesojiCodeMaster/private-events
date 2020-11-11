@@ -1,9 +1,7 @@
 require 'rails_helper'
 require 'date'
 
-
-feature "Create Event" do
-
+feature 'Create Event' do
   describe 'Create a new event' do
     it 'It should create a new event successfully' do
       # create a new event
