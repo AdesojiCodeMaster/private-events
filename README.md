@@ -42,10 +42,10 @@ You need to have this app or tools to start using it:
 ## Authors
 👤  **Juan Jacobo Hincapie Montes**
 
-- Gmail: [@gmail](jacobo12.montes@gmail.com)
-- Github: [@githubhandle](https://github.com/jacobo12montes)
-- Twitter: [@twitterhandle](https://twitter.com/HincapieMontes)
-- Linkedin: [linkedin](https://www.linkedin.com/in/juan-jacobo-hincapie-montes/)
+- Gmail: [jacobo12.montes@gmail.com](jacobo12.montes@gmail.com)
+- Github: [@jacobo12.mont](https://github.com/jacobo12montes)
+- Twitter: [@jacobo12.mont](https://twitter.com/HincapieMontes)
+- Linkedin: [@jacobo12.mont](https://www.linkedin.com/in/juan-jacobo-hincapie-montes/)
 
 👤 **Adesoji Adewumi**
 
