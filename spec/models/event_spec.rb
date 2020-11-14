@@ -30,7 +30,7 @@ RSpec.describe Event, type: :model do
 
   it 'Should not work, for creator is necessary' do
     e = Event.new(name: 'naming', description: 'Party',location: 'Colombia', date: Date.today)
-    expect(e.valid?).to eql(true)
+    expect(e.valid?).to eql(false)
   end
 end
 end
