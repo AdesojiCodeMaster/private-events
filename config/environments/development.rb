@@ -57,7 +57,7 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
-  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.file_watcher = ActiveSupport::FileUpdateChecker
   
   # Ensure you have defined default url options in your environments files. Here
   # is an example of default_url_options appropriate for a development environment

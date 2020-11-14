@@ -17,7 +17,7 @@
   <% if current_user %>
 
     <label for='name'>Event Planner: <%= current_user.name %></label>
-    <button class='front-log'><%= link_to " Logout", destroy_user_session_path, :method => :delete, class: "destroy_user_session" %></button>
+    <button class='front-log'><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "destroy_user_session" %></button>
     </div>
     <div class='arr-link'>
     <div class='t-link'><%= link_to "Event Types", events_path%> </div>
