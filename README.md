@@ -40,7 +40,7 @@ You need to have this app or tools to start using it:
 * [Stickler](https://stickler-ci.com/)
 
 ### Testing
-##### Add the following gems to 'development, :test' in the gemfile;
+##### Add the following gems to the 'development, :test' in the gemfile;
  * gem 'capybara', '~> 3.13'
  * gem 'factory_bot_rails'
  * gem 'pry-byebug'
@@ -48,7 +48,11 @@ You need to have this app or tools to start using it:
  * gem 'shoulda-matchers'
  * gem 'webdrivers'
 
+### Install the gems;
+
  * Run `bundle install` from the terminal.
+
+ ### Run the test;
 
  * Run `rspec` from root of the folder using terminal.
 
