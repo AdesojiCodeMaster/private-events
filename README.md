@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://www.microverse.org/">
-    <img src="app/assets/images/microverse.png" alt="Logo" width="80" height="80">
+    <img src="../app/assets/images/microverse.png" alt="Logo" width="80" height="80">
   </a>
 
   <h2 align="center">AUTHENTICATION: Private Events</h2>
@@ -38,6 +38,19 @@ You need to have this app or tools to start using it:
 * [Rails](https://rubyonrails.org/):
 * [Rubocop](https://github.com/rubocop-hq/rubocop)
 * [Stickler](https://stickler-ci.com/)
+
+### Testing
+##### Add the following gems to 'development, :test' in the gemfile;
+ * gem 'capybara', '~> 3.13'
+ * gem 'factory_bot_rails'
+ * gem 'pry-byebug'
+ * gem 'rspec-rails'
+ * gem 'shoulda-matchers'
+ * gem 'webdrivers'
+
+ ### Run bundle install from the terminal.
+
+* Run `rspec` from root of the folder using terminal.
 
 ## Authors
 👤  **Juan Jacobo Hincapie Montes**
