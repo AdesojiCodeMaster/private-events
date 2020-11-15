@@ -15,5 +15,4 @@ RSpec.describe User, type: :model do
       expect(x.valid?).to eq(false)
     end
   end
-
 end
