@@ -9,8 +9,8 @@ RSpec.feature "Users", type: :feature do
     
     click_link "Sign_up"
     
-    fill_in "Name", with: "fp010je"
-    fill_in "Email", with: "fpo10je@example.com"
+    fill_in "Name", with: "boo10je"
+    fill_in "Email", with: "boo10je@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Sign up"
