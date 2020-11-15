@@ -48,9 +48,9 @@ You need to have this app or tools to start using it:
  * gem 'shoulda-matchers'
  * gem 'webdrivers'
 
- ### Run bundle install from the terminal.
+ * Run `bundle install` from the terminal.
 
-* Run `rspec` from root of the folder using terminal.
+ * Run `rspec` from root of the folder using terminal.
 
 ## Authors
 👤  **Juan Jacobo Hincapie Montes**
