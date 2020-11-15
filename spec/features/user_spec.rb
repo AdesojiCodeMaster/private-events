@@ -12,14 +12,14 @@ RSpec.feature 'Users', type: :feature do
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
-      end
+    end
 
     it 'log in user' do
       visit new_user_session_path
-       
+
       fill_in 'Email', with: 'fpo9je@example.com'
       fill_in 'Password', with: 'password'
       click_button 'Log in'
-      end
     end
   end
+end
