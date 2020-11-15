@@ -12,18 +12,14 @@ RSpec.feature 'Users', type: :feature do
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
-      expect(page).to have_text 'Welcome! You have signed up successfully.'
-      click_button 'Logout'
-    end
+      end
 
     it 'log in user' do
       visit new_user_session_path
-
+       
       fill_in 'Email', with: 'fpo9je@example.com'
       fill_in 'Password', with: 'password'
       click_button 'Log in'
-      expect(page).to have_text 'Signed in successfully.'
-      click_button 'Logout'
+      end
     end
   end
-end

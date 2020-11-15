@@ -10,16 +10,16 @@ RSpec.describe EventAttendance, type: :model do
       a = EventAttendance.new(event_id: 1, attended_event_id: 1, attendee_id: 1)
       expect(a.valid?).to eql(true)
     end
-    it "Should not work for it doesn't have an event creator" do
+    it "Should work for it doesn't have an event creator" do
       a = EventAttendance.new(event_id: 1)
       expect(a.valid?).to eql(false)
     end
-    it "Should not work for it doesn't attend an event" do
+    it "Should work for it doesn't attend an event" do
       a = EventAttendance.new(attended_event_id: 1)
       expect(a.valid?).to eql(false)
     end
 
-    it "Should not work for it doesn't have an event" do
+    it "Should work for it doesn't have an event" do
       a = EventAttendance.new(attendee_id: 1)
       expect(a.valid?).to eql(false)
     end
