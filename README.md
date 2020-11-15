@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://www.microverse.org/">
-    <img src="../app/assets/images/microverse.png" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/microverse.png" alt="Logo" width="80" height="80">
   </a>
 
   <h2 align="center">AUTHENTICATION: Private Events</h2>
