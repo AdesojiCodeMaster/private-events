@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PrivateEvents</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <div class='arr-links'>
+  <div class='col-arr'>
+  <% if current_user %>
+
+    <label for='name'>Event Planner: <%= current_user.name %></label>
+    <button class='front-log'><%= link_to "Logout", destroy_user_session_path, :method => :delete, class: "destroy_user_session" %></button>
+    </div>
+    <div class='arr-link'>
+    <div class='t-link'><%= link_to "Event Types", events_path%> </div>
+    <div class='t-link'> <%= link_to "All Events", root_path%> </div>
+    <div class='t-link'><%= link_to 'Event DashBoard', users_show_path(current_user)%></div>
+    <div class='t-link'> <%= link_to 'Create New Event', new_event_path %></div>
+    </div>
+  </div>
+    <%else%>
+    <button class='front-btn' ><%= link_to "Sign_up", new_user_registration_path,  class: "new__user_registration" %></button>
+    <button class='front-btn'><%= link_to "Log_in", new_user_session_path,  class: "new_user_session" %></button>
+  <% end %>
+  
+  <%= yield %>
+  </body>
+</html>

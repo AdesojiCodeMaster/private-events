@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.lay-lists {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.top-list {
+  background-color: #0ff;
+  color: #5656d3;
+  margin: 10px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.front-log {
+  height: 46px;
+  margin-right: 20px;
+}
+
+span {
+  color: #b50fd6;
+  font-size: 18px;
+}
+
+.lay_out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arr-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-arr {
+  display: flex;
+  flex-direction: column;
+}
+
+.arr-link {
+  display: flex;
+  flex-direction: row;
+  margin-top: 13px;
+}
+
+.t-link {
+  margin: 30px;
+  font-size: 1rem;
+}
+
+.t-link a {
+  background-color: #8ab5da;
+  border: 1px solid #f00;
+  color: #fff;
+  padding: 3px;
+}
+
+label {
+  color: #800080;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.front-btn {
+  height: 36px;
+  margin: 5px;
+  width: 76px;
+}
+
+.extend1 {
+  margin-bottom: 0;
+}

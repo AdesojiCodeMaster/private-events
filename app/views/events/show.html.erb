@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @event.creator.name %>
+</p>
+<table>
+    <p>ATTENDEES INFO</p>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% EventAttendance.all.each do |eventattendance| %>
+        <%if @event.id == eventattendance.attended_event_id%>
+            <% User.all.each do |user| %>
+                <% if user.id == eventattendance.attendee_id%>
+                    <tr>
+                        <td><%= user.name %></td>
+                    </tr>
+                <%end%>
+            <%end%>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+

@@ -1,0 +1,96 @@
+<% require 'date'%>
+
+<table>
+    <h1>Attending Upcomming Event(s)</h1>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% EventAttendance.all.each do |eventattendance| %>
+        <% if current_user.id == eventattendance.attendee_id%>
+            <% Event.upcoming_events.each do |event| %>
+                <%if event.id == eventattendance.attended_event_id%>
+                    <tr>
+                        <td><%= event.name %></td>
+                        <td><%= event.description %></td>
+                        <td><%= event.location %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.creator.name %></td>
+                        <td><%= link_to 'Show Event', event %></td>
+                        </tr>
+                <%end%>
+            <%end%>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+    <h1>Attending Past Event(s)</h1>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% EventAttendance.all.each do |eventattendance| %>
+        <% if current_user.id == eventattendance.attendee_id%>
+            <% Event.past_events.each do |event| %>
+                <%if event.id == eventattendance.attended_event_id%>
+                    <tr>
+                        <td><%= event.name %></td>
+                        <td><%= event.description %></td>
+                        <td><%= event.location %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.creator.name %></td>
+                        <td><%= link_to 'Show Event', event %></td>
+                        </tr>
+                <%end%>
+            <%end%>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+    <h1> <%= current_user.name %>Created Event(s)</h>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% Event.all.each do |event| %>
+        <% if current_user.id == event.creator.id%>
+          <tr>
+            <td><%= event.name %></td>
+            <td><%= event.description %></td>
+            <td><%= event.location %></td>
+            <td><%= event.date %></td>
+            <td><%= event.creator.name %></td>
+            <td><%= link_to 'Show Event', event %></td>
+          </tr>
+        <%end%>
+    <% end %>
+  </tbody>
+</table>
