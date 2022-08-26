@@ -49,12 +49,16 @@ span {
 .arr-links {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-.col-arr {
+.btn-arg {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 
 .arr-link {
   display: flex;
@@ -89,3 +93,10 @@ label {
 .extend1 {
   margin-bottom: 0;
 }
+ body {
+  background-color: #ffc0cb;
+ }
+
+ .alert, .notice {
+  color: #0000ff;
+ }

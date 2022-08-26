@@ -13,7 +13,7 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <div class='arr-links'>
-  <div class='col-arr'>
+  <div>
   <% if current_user %>
 
     <label for='name'>Event Planner: <%= current_user.name %></label>
@@ -27,9 +27,11 @@
     </div>
   </div>
     <%else%>
+    <div class='btn-arg'>
     <button class='front-btn' ><%= link_to "Sign_up", new_user_registration_path,  class: "new__user_registration" %></button>
     <button class='front-btn'><%= link_to "Log_in", new_user_session_path,  class: "new_user_session" %></button>
-  <% end %>
+  </div>
+    <% end %>
   
   <%= yield %>
   </body>
