@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Categories</h1>
+
+<table>
+    <h3>UPCOMING EVENTS</h3>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+    <% Event.upcoming_events.each do |event| %>
+          <tr>
+            <td><%= event.name %></td>
+            <td><%= event.description %></td>
+            <td><%= event.location %></td>
+            <td><%= event.date %></td>
+            <td><%= event.creator.name %></td>
+            <td><%= link_to 'Show Event', event %></td>
+            <td><%= link_to 'Attend Event', event_attending_path(event), method: :post %></td>
+          </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<table>
+    <h3>PAST EVENTS</h3>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Creator</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+    <% Event.past_events.each do |event| %>
+          <tr>
+            <td><%= event.name %></td>
+            <td><%= event.description %></td>
+            <td><%= event.location %></td>
+            <td><%= event.date %></td>
+            <td><%= event.creator.name %></td>
+            <td><%= link_to 'Show Event', event %></td>
+            </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+
